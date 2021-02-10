@@ -3,8 +3,7 @@ module.exports = {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [],
-  target: 'relaxed',
+  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   prefix: '',
   important: false,
   separator: ':',
@@ -21,6 +20,7 @@ module.exports = {
 
       black: '#000',
       white: '#fff',
+      tmprimary: "#091c29",
 
       gray: {
         100: '#f7fafc',
@@ -267,6 +267,7 @@ module.exports = {
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      dosis: ['Dosis']
     },
     fontSize: {
       xs: '0.75rem',
@@ -680,6 +681,8 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      float: 'float 3s infinite',
+      refloat: 'float 3s infinite'
     },
     keyframes: {
       spin: {
@@ -701,6 +704,34 @@ module.exports = {
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
         },
       },
+      float: {
+        '0%': {
+          transform: 'translateY(0px)',
+          animationTimingFunction: 'easy-in-out',
+        },
+        '50%': {
+          transform: 'translateY(-20px)',
+          animationTimingFunction: 'easy-in-out',
+        },
+        '100%': {
+          transform: 'translateY(0px)',
+          animationTimingFunction: 'easy-in-out',
+        },
+      },
+      refloat: {
+        '0%': {
+          transform: 'translateY(-20px)',
+          animationTimingFunction: 'easy-in-out',
+        },
+        '50%': {
+          transform: 'translateY(0px)',
+          animationTimingFunction: 'easy-in-out',
+        },
+        '100%': {
+          transform: 'translateY(-20px)',
+          animationTimingFunction: 'easy-in-out',
+        },
+      }
     },
   },
   variants: {
