@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Link from 'next/Link'
+import Link from 'next/link'
 import content from "../../content";
 import {navLinks} from '../../config'
 import {CSSTransition, TransitionGroup} from "react-transition-group";
