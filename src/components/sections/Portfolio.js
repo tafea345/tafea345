@@ -1,6 +1,6 @@
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import Link from "next/Link";
+import Link from "next/link";
 
 export default function Portfolio({ portfolio }) {
   console.log(portfolio);
