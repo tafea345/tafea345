@@ -1,11 +1,28 @@
 import {Hero, Skills} from '../src/components'
+import Portfolio from '../src/components/sections/Portfolio'
 
-export default function Home() {
+import client from '../src/utils/helpers'
+
+export async function getStaticProps() {
+    let data = await client.getEntries({
+        content_type: 'portfolio'
+    })
+
+    return {
+        props: {
+            portfolio: data.items,
+        }
+    }
+};
+
+export default function Home({portfolio}) {
+    console.log("stuff",portfolio)
   return (
       <>
           <div className="">
               <Hero/>
-              {/*<Skills />*/}
+              {/* <Skills /> */}
+              <Portfolio portfolio={portfolio}/>
           </div>
       </>
   )

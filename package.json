@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.21.1",
+    "contentful": "^8.1.7",
     "next": "10.0.6",
     "postcss": "^8.2.5",
     "react": "^17.0.0",

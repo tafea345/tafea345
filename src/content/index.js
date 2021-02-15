@@ -1,6 +1,7 @@
 export default {
   nav: {
-    logo: "CC",
+    logo: "TAF",
+    slogan: "CODES",
     links: [
       { text: "Work", to: "mywork" },
       { text: "Contact", to: "mycontact" },
