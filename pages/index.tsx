@@ -1,4 +1,4 @@
-import { Hero, Skills } from '../src/components'
+import { Hero } from '../src/components'
 import Portfolio from '../src/components/sections/Portfolio'
 
 import client from '../src/utils/helpers'
@@ -9,7 +9,6 @@ export default function Home({ portfolio }) {
         <>
             <div className="" >
                 <Hero />
-                {/* <Skills /> */}
                 <Portfolio portfolio={portfolio} />
             </div>
         </>
