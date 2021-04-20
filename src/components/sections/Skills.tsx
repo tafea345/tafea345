@@ -5,7 +5,7 @@ import content from "../../content";
 export default function Skills() {
   return (
     <div className="body-font bg-gray-100 py-24">
-      <section class="w-11/12 mx-auto flex flex-col ">
+      <section className="w-11/12 mx-auto flex flex-col ">
         <div className="flex mt-10">
           <h2 className="text-3xl md:text-5xl font-bold">About Me</h2>
         </div>

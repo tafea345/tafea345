@@ -5,8 +5,8 @@
 
 
 module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
+    plugins: {
+        [process.env.NODE_ENV === 'production' ? 'tailwindcss' : '@tailwindcss/jit']: {},
+        autoprefixer: {},
+    },
 }
