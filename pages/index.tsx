@@ -1,4 +1,5 @@
 import { Hero } from '../src/components'
+import About from '../src/components/sections/About'
 import Portfolio from '../src/components/sections/Portfolio'
 
 import client from '../src/utils/helpers'
@@ -7,8 +8,9 @@ export default function Home({ portfolio }) {
     console.log("stuff", portfolio)
     return (
         <>
-            <div className="" >
+            <div className="w-full" >
                 <Hero />
+                <About />
                 <Portfolio portfolio={portfolio} />
             </div>
         </>

@@ -1,4 +1,4 @@
-module.exports = {
+const data = {
     email: 'tafea345@gmail.com',
 
     socialMedia: [
@@ -15,7 +15,7 @@ module.exports = {
     navLinks: [
         {
             name: 'About',
-            url : '/about'
+            url: '/about'
         },
         {
             name: "Experience",
@@ -31,3 +31,5 @@ module.exports = {
         }
     ]
 }
+
+export default data

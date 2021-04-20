@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import content from "../../content";
-import { navLinks } from "../../config";
+import data from "../../config";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { loaderDelay } from "../../utils";
 
@@ -29,22 +29,20 @@ export default function Navigation() {
             {content.nav.slogan}
           </h1>
         </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nav className="md:ml-auto flex text-base">
           <TransitionGroup component={null}>
             <CSSTransition className="" timeout={timeout}>
               <>
-                {navLinks.map(({ url, name }, i) => {
-                  return (
-                    <li
-                      key={i}
-                      className="inline-block mx-4 text-gray-300 hover:text-teal-500"
-                    >
-                      <Link href={url} className="">
-                        {name}
+                <div className="flex flex-wrap  text-md justify-center items-center">
+                  {data.navLinks.map(({ url, name }, i) => {
+                    return (
+                      <Link href={url} key={i}>
+                        <a className="mr-4 text-gray-300 hover:text-teal-500 hover:scale-125"> <span className="text-teal-500">_</span> {name}</a>
                       </Link>
-                    </li>
-                  );
-                })}
+                    )
+                  })}
+                  <a className="cursor-pointer p-2 border-2 border-teal-600 rounded-md text-teal-100 hover:text-teal-500 px-4 py-2">Resume</a>
+                </div>
               </>
             </CSSTransition>
           </TransitionGroup>
